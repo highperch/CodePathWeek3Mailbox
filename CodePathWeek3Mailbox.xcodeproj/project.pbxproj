@@ -14,6 +14,8 @@
 		1E4621191C72646B0066AE82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E4621171C72646B0066AE82 /* LaunchScreen.storyboard */; };
 		1E4621241C72646B0066AE82 /* CodePathWeek3MailboxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4621231C72646B0066AE82 /* CodePathWeek3MailboxTests.swift */; };
 		1E46212F1C72646B0066AE82 /* CodePathWeek3MailboxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E46212E1C72646B0066AE82 /* CodePathWeek3MailboxUITests.swift */; };
+		1E46213D1C7265880066AE82 /* MailboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E46213C1C7265880066AE82 /* MailboxViewController.swift */; };
+		1ECA08F41C73CDD0003CE974 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECA08F31C73CDD0003CE974 /* Common.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		1E46212A1C72646B0066AE82 /* CodePathWeek3MailboxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodePathWeek3MailboxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E46212E1C72646B0066AE82 /* CodePathWeek3MailboxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodePathWeek3MailboxUITests.swift; sourceTree = "<group>"; };
 		1E4621301C72646B0066AE82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E46213C1C7265880066AE82 /* MailboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailboxViewController.swift; sourceTree = "<group>"; };
+		1ECA08F31C73CDD0003CE974 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +102,10 @@
 			isa = PBXGroup;
 			children = (
 				1E46210E1C72646B0066AE82 /* AppDelegate.swift */,
+				1ECA08F31C73CDD0003CE974 /* Common.swift */,
 				1E4621101C72646B0066AE82 /* ViewController.swift */,
 				1E4621121C72646B0066AE82 /* Main.storyboard */,
+				1E46213E1C72658F0066AE82 /* View Controllers */,
 				1E4621151C72646B0066AE82 /* Assets.xcassets */,
 				1E4621171C72646B0066AE82 /* LaunchScreen.storyboard */,
 				1E46211A1C72646B0066AE82 /* Info.plist */,
@@ -123,6 +129,14 @@
 				1E4621301C72646B0066AE82 /* Info.plist */,
 			);
 			path = CodePathWeek3MailboxUITests;
+			sourceTree = "<group>";
+		};
+		1E46213E1C72658F0066AE82 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1E46213C1C7265880066AE82 /* MailboxViewController.swift */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +273,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ECA08F41C73CDD0003CE974 /* Common.swift in Sources */,
 				1E4621111C72646B0066AE82 /* ViewController.swift in Sources */,
 				1E46210F1C72646B0066AE82 /* AppDelegate.swift in Sources */,
+				1E46213D1C7265880066AE82 /* MailboxViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +503,7 @@
 				1E4621351C72646B0066AE82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1E4621361C72646B0066AE82 /* Build configuration list for PBXNativeTarget "CodePathWeek3MailboxTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +512,7 @@
 				1E4621381C72646B0066AE82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1E4621391C72646B0066AE82 /* Build configuration list for PBXNativeTarget "CodePathWeek3MailboxUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +521,7 @@
 				1E46213B1C72646B0066AE82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
