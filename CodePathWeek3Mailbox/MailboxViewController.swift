@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MessageUI
 
-class MailboxViewController: UIViewController {
+class MailboxViewController: UIViewController, MFMailComposeViewControllerDelegate {
     
     //Center points
     var mailboxViewCenter: CGPoint!
@@ -48,6 +49,7 @@ class MailboxViewController: UIViewController {
     @IBOutlet weak var laterScrollView: UIScrollView!
     @IBOutlet weak var segmentMenu: UISegmentedControl!
     @IBOutlet weak var numberOfLaters: UILabel!
+    @IBOutlet weak var composeView: UIView!
     
     //Define colors
     let grayColor = UIColor(red: 0.89, green: 0.89, blue: 0.89, alpha: 1)
@@ -173,6 +175,7 @@ class MailboxViewController: UIViewController {
                 number_rescheduled -= 1
                 defaults.setInteger(number_rescheduled, forKey: "emails_rescheduled")
                 defaults.synchronize()
+                numberOfLaters.text = String(number_rescheduled)
                 laterScrollView.contentSize.height -= 86
                 for subView in self.laterScrollView.subviews {
                     if subView.tag == number_rescheduled {
@@ -330,6 +333,39 @@ class MailboxViewController: UIViewController {
         hideFirstMessage()
     }
 
+    @IBAction func didPressCompose(sender: UIButton) {
+        UIView.animateWithDuration(0.5) { () -> Void in
+            self.composeView.center.y -= 568
+        }
+        /*
+        // Old code from MFMailComposeViewController which is supposedly broken in Simulator
+        let composeVC = MFMailComposeViewController()
+        composeVC.mailComposeDelegate = self
+        
+        // Configure the fields of the interface.
+        composeVC.setToRecipients(["justin@gmail.com"])
+        composeVC.setSubject("Hello!")
+        composeVC.setMessageBody("Hello from California!", isHTML: false)
+        
+        // Present the view controller modally.
+        self.presentViewController(composeVC, animated: true, completion: nil)
+        */
+    }
+    
+    @IBAction func didPressCancelCompose(sender: AnyObject) {
+        view.endEditing(true)
+        UIView.animateWithDuration(0.5) { () -> Void in
+            self.composeView.center.y += 568
+        }
+    }
+    
+    func mailComposeController(controller: MFMailComposeViewController,
+        didFinishWithResult result: MFMailComposeResult, error: NSError?) {
+            // Check the result or perform other tasks.
+            
+            // Dismiss the mail compose view controller.
+            controller.dismissViewControllerAnimated(true, completion: nil)
+    }
     
     func onEdgePan(sender:UIScreenEdgePanGestureRecognizer) {
         var translation_x = sender.translationInView(contentView).x
