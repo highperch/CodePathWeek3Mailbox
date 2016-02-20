@@ -34,3 +34,9 @@ This value drives the number count next to Saved for Later in the menu, and the 
 I had some trouble getting a tap gesture recognizer to work for closing the menu. It might have tried to use the one I created for the reschedule/list view dismiss.
 I didn't yet store the past actions in an array, but that would let me more intelligently go backwards in time with each shake.
 I added the native compose e-mail function to Compose but it seems to crash in simulator, so I used a mock instead.
+
+Walkthrough of all user stories:
+
+![week 3 walkthrough gif] (https://cloud.githubusercontent.com/assets/3476345/13198872/78934558-d7c9-11e5-8245-7539ed0a634e.gif)
+
+GIF created with LiceCap.
