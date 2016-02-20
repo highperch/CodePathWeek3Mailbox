@@ -4,7 +4,7 @@ Mailbox App Demo
 
 This is a walkthrough of the iOS Mailbox app for week 3's assignment.
 
-Time spent: 8.5 hours in total
+Time spent: 9.5 hours in total
 
 Project Requirements
  * [x] On dragging the message left...
@@ -25,11 +25,12 @@ Project Requirements
  * [x] Optional: Panning from the edge should reveal the menu
    * [x] Optional: If the menu is being revealed when the user lifts their finger, it should continue revealing.
    * [x] Optional: If the menu is being hidden when the user lifts their finger, it should continue hiding.
- * [ ] Optional: Tapping on compose should animate to reveal the compose view.
+ * [x] Optional: Tapping on compose should animate to reveal the compose view.
  * [x] Optional: Tapping the segmented control in the title should swipe views in from the left or right.
  * [x] Optional: Shake to undo.
 
-Notes: I stored the number of files archived/saved for later in NSUserDefaults. Don't think it's necessary in this case as I mantain the lists in one view.
+Notes: I stored the number of files archived/saved for later in NSUserDefaults. Don't think it's necessary in this case as I maintain the lists in one view, but could be helpful for the project.
 This value drives the number count next to Saved for Later in the menu, and the number of emails in each scrollview list.
 I had some trouble getting a tap gesture recognizer to work for closing the menu. It might have tried to use the one I created for the reschedule/list view dismiss.
 I didn't yet store the past actions in an array, but that would let me more intelligently go backwards in time with each shake.
+I added the native compose e-mail function to Compose but it seems to crash in simulator, so I used a mock instead.
