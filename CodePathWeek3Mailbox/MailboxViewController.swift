@@ -148,6 +148,8 @@ class MailboxViewController: UIViewController {
     
     func resetLastAction (lastaction: String) {
         resetFirstMessage()
+        self.mailboxMessageFeed.center = self.mailboxMessageFeedCenter
+        mailboxFirstMessageView.hidden = false
         if lastaction == "archive" {
             var number_archived = defaults.integerForKey("emails_archived")
             if number_archived > 0 {
